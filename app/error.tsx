@@ -9,6 +9,7 @@ export default function Error({
   error: Error;
   reset: () => void;
 }) {
+  const intentionalError = null;
   useEffect(() => {
     // Log the error to an error reporting service
     /* eslint-disable no-console */
