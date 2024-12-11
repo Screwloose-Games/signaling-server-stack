@@ -2,9 +2,13 @@ name: EsLint
 
 on:
   push:
-    branches: [ $default-branch, $protected-branch ]
+    branches:
+      - main
+      - protected-branch
   pull_request:
-    branches: [ $default-branch, $protected-branch ]
+    branches:
+      - main
+      - protected-branch
 
 jobs:
   eslint:
@@ -23,5 +27,3 @@ jobs:
 
       - name: Run Eslint
         run: npm run lint
-
-
